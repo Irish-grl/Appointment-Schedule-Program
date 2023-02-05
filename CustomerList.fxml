@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerList">
+   <children>
+      <VBox maxHeight="719.0" maxWidth="857.0" prefHeight="719.0" prefWidth="857.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="850.0">
+               <children>
+                  <Label text="Customers">
+                     <font>
+                        <Font name="System Bold Italic" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <TableView fx:id="customerListTableView" prefHeight="478.0" prefWidth="857.0">
+              <columns>
+                <TableColumn fx:id="customerID" minWidth="100.0" prefWidth="75.0" text="Customer ID" />
+                <TableColumn fx:id="customerName" minWidth="130.0" prefWidth="75.0" text="Customer Name" />
+                  <TableColumn fx:id="address" minWidth="240.0" prefWidth="75.0" text="Address" />
+                  <TableColumn fx:id="stateProvince" minWidth="115.0" prefWidth="75.0" text="State" />
+                  <TableColumn fx:id="postalCode" minWidth="115.0" prefWidth="75.0" text="Postal Code" />
+                  <TableColumn fx:id="phone" minWidth="130.0" prefWidth="75.0" text="Phone" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="142.0" prefWidth="857.0" spacing="15.0">
+               <children>
+                  <Button fx:id="addCustomerButton" mnemonicParsing="false" onAction="#onActionAddCustomer" prefHeight="25.0" prefWidth="110.0" text="Add Customer" />
+                  <Button fx:id="modifyCustomerButton" mnemonicParsing="false" onAction="#onActionModifyCustomer" prefHeight="25.0" prefWidth="110.0" text="Modify Customer" />
+                  <Button fx:id="deleteCustomerButton" mnemonicParsing="false" onAction="#onActionDeleteCustomer" prefHeight="25.0" prefWidth="110.0" text="Delete Customer" />
+                  <Button fx:id="backToScheduleButton" mnemonicParsing="false" onAction="#onActionBackToSchedule" prefHeight="25.0" prefWidth="110.0" text="Back To Schedule" />
+                  <Button fx:id="toReportsButton" mnemonicParsing="false" onAction="#onActionToReports" prefHeight="25.0" prefWidth="110.0" text="Reports" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

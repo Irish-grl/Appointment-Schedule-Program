@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ScheduleController">
+   <children>
+      <VBox prefHeight="700.0" prefWidth="850.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="850.0">
+               <children>
+                  <Label text="Appointment Schedule">
+                     <font>
+                        <Font name="System Bold Italic" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <TableView fx:id="appointmentTableView" prefHeight="406.0" prefWidth="850.0">
+              <columns>
+                <TableColumn fx:id="appointmentId" prefWidth="91.0" text="Appointment ID" />
+                <TableColumn fx:id="title" prefWidth="92.0" text="Title" />
+                  <TableColumn fx:id="description" prefWidth="92.0" text="Description" />
+                  <TableColumn fx:id="location" prefWidth="92.0" text="Location" />
+                  <TableColumn fx:id="contact" prefWidth="92.0" text="Contact" />
+                  <TableColumn fx:id="type" prefWidth="92.0" text="Type" />
+                  <TableColumn fx:id="startDateTime" prefWidth="92.0" text="Start Date/time" />
+                  <TableColumn fx:id="endDateTime" prefWidth="91.0" text="End Date/Time" />
+                  <TableColumn fx:id="customerId" prefWidth="91.0" text="Customer ID" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="200.0" prefWidth="425.0" spacing="65.0">
+                     <children>
+                        <RadioButton fx:id="viewWeekRB" mnemonicParsing="false" onAction="#onActionViewWeek" selected="true" text="View Week">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radioButton" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="viewMonthRB" mnemonicParsing="false" onAction="#onActionViewMonth" text="View Month" toggleGroup="$radioButton" />
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="250.0" prefWidth="425.0" spacing="30.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="425.0" spacing="10.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                 <children>
+                                    <Button fx:id="addApptButton" mnemonicParsing="false" onAction="#onActionNewAppt" text="Add Appointment" />
+                                    <Button fx:id="updateApptButton" mnemonicParsing="false" onAction="#onActionUpdateAppt" text="Update Appointment" />
+                                    <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onActionDeleteAppt" text="Cancel Appointment" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="200.0" prefWidth="425.0" spacing="30.0">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <children>
+                        <Button fx:id="customerListButton" mnemonicParsing="false" onAction="#onActionCustomerList" prefHeight="25.0" prefWidth="110.0" text="Customer List" />
+                        <Button fx:id="reportsButton" mnemonicParsing="false" onAction="#onActionToReports" prefHeight="25.0" prefWidth="110.0" text="Reports" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="200.0" prefWidth="425.0" spacing="30.0">
+                     <children>
+                        <Button fx:id="exitButton" mnemonicParsing="false" onAction="#onActionHomeScreen" prefHeight="25.0" prefWidth="110.0" text="Exit" />
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
